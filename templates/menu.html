@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/car.css') }}">
+    <script src="{{ url_for( 'static', filename='javascript/appcar.js' ) }}" async></script>
+    <title>Rincon Prohibido</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="contenedor-navegacion">
+            <div class="contenido-navegacion contenedor">
+                <a href="/" class="logo">
+                    <div>
+                        <h2>Rincon<span class="verde">Pro</span><span>hi</span>bi<span class="rojo">do</span></h2>
+                    </div>
+                </a>
+
+                <nav class="navegacion ocultar">
+                    <div class="botones-platillos">
+                        <ul class="list-platillos">
+                            <li class="todos">
+                                <a href="#todos">Todos</a>
+                            </li>
+                            <li class="ensaladas">
+                                <a href="#ensaladas">
+                                    Ensaladas
+                                </a>
+                            </li>
+                            <li class="pasta">
+                                <a href="#pastas">
+                                    Pastas
+                                </a>
+                            </li>
+                            <li class="pizza">
+                                <a href="#pizzas">
+                                    Pizzas
+                                </a>
+                            </li>
+                            <li class="postres">
+                                <a href="#postres">
+                                    Postres
+                                </a>
+                            </li>
+
+                            <li class="inicio">
+                                <a href="/">
+                                    Inicio
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-person"></i>
+                                </a>
+                                <ul class="dropdown-menu usario  ">
+                                    <li><a class="list-usuario" href="#">
+                                        {% for full_name in user_names %}
+                                            {{ full_name }}
+                                        {% endfor %}
+                                         
+                                    </li></a>
+                                        <li><a class="list-usuario" href="/login">Cerrar Sesión</a></li>
+                                </ul>
+                                </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="hamburguesa">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="texto-menu">
+        <h1 class="texto-platillos">menu</h1>
+    </div>
+    <section class="contenedor-car">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Ensalada de lechuga</span>
+                <img data-src=" {{url_for('static', filename='img/ensalada_1.jpg')}}" alt="ensalada " class="img-item">
+                <span class="precio-item">$15.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ensalada de tomate</span>
+                <img data-src=" {{url_for('static', filename='img/ensalada_2.jpg')}}" alt="ensalada " class="img-item">
+                <span class="precio-item">$25.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ensalada de frijoles</span>
+                <img data-src=" {{url_for('static', filename='img/ensalada_3.jpg')}}" class="img-item">
+                <span class="precio-item">$35.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">ensalada de pollo</span>
+                <img data-src=" {{url_for('static', filename='img/ensalada_4.jpg')}}" class="img-item">
+                <span class="precio-item">$18.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">pasta con tocino</span>
+                <img data-src=" {{url_for('static', filename='img/pasta_1.jpg')}}" alt="" class="img-item">
+                <span class="precio-item">$32.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">pasta con salmón</span>
+                <img data-src=" {{url_for('static', filename='img/pasta_2.jpeg')}}" class="img-item">
+                <span class="precio-item">$18.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">pasta con carne</span>
+                <img data-src=" {{url_for('static', filename='img/pasta_3.jpg')}}" class="img-item">
+                <span class="precio-item ">$54.000</span>
+                <button class="boton-item ">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item ">pasta con pollo</span>
+                <img data-src=" {{url_for( 'static', filename='img/pasta_4.jpeg' )}} " class="img-item ">
+                <span class="precio-item ">$32.000</span>
+                <button class="boton-item ">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item ">pizza de champiñones</span>
+                <img data-src=" {{url_for( 'static', filename='img/pizza_1.jpg' )}} " class="img-item ">
+                <span class="precio-item ">$42.800</span>
+                <button class="boton-item ">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item ">pizza hawaiana</span>
+                <img data-src=" {{url_for( 'static', filename='img/pizza_2.jpg' )}} " class="img-item ">
+                <span class="precio-item ">$42.800</span>
+                <button class="boton-item ">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item ">pizza de jamón</span>
+                <img data-src=" {{url_for( 'static', filename='img/pizza_3.jpg' )}} " class="img-item ">
+                <span class="precio-item ">$42.800</span>
+                <button class="boton-item ">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item ">pizza de pepperoni</span>
+                <img data-src="  {{url_for( 'static', filename='img/pizza_4.jpg' )}} " class="img-item ">
+                <span class="precio-item ">$42.800</span>
+                <button class="boton-item ">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item ">postres de profiteroles</span>
+                <img data-src="{{url_for( 'static', filename='img/postres1.webp' )}} " class="img-item ">
+                <span class="precio-item ">$42.800</span>
+                <button class="boton-item ">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item ">Postres con fresas</span>
+                <img data-src="  {{url_for( 'static', filename='img/postres2.webp' )}} " class="img-item ">
+                <span class="precio-item ">$42.800</span>
+                <button class="boton-item ">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item ">postres de banana</span>
+                <img data-src="{{url_for( 'static', filename='img/postres3.webp' )}}  " class="img-item ">
+                <span class="precio-item ">$42.800</span>
+                <button class="boton-item ">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item ">postres  de chocolate</span>
+                <img data-src="{{url_for( 'static', filename='img/postres4.webp' )}}" class="img-item ">
+                <span class="precio-item ">$42.800</span>
+                <button class="boton-item ">Agregar al Carrito</button>
+            </div>
+
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito " id="carrito ">
+            <div class="header-carrito ">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items ">
+                <!-- 
+                <div class="carrito-item ">
+                    <img src="img/boxengasse.png " width="80px " alt=" ">
+                    <div class="carrito-item-detalles ">
+                        <span class="carrito-item-titulo ">Box Engasse</span>
+                        <div class="selector-cantidad ">
+                            <i class="fa-solid fa-minus restar-cantidad "></i>
+                            <input type="text " value="1 " class="carrito-item-cantidad " disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad "></i>
+                        </div>
+                        <span class="carrito-item-precio ">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar ">
+                        <i class="fa-solid fa-trash "></i>
+                   </span>
+                </div>
+                <div class="carrito-item ">
+                    <img src="img/skinglam.png " width="80px " alt=" ">
+                    <div class="carrito-item-detalles ">
+                        <span class="carrito-item-titulo ">Skin Glam</span>
+                        <div class="selector-cantidad ">
+                            <i class="fa-solid fa-minus restar-cantidad "></i>
+                            <input type="text " value="3 " class="carrito-item-cantidad " disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad "></i>
+                        </div>
+                        <span class="carrito-item-precio ">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar ">
+                        <i class="fa-solid fa-trash "></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total ">
+                <div class="fila ">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total ">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar ">Pagar <i class="fa-solid fa-bag-shopping "></i> </button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="{{ url_for( 'static', filename='javascript/app.js' ) }} "></script>
+
+</body>
+
+</html>

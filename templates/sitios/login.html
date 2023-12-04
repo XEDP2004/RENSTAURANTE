@@ -1,0 +1,37 @@
+{% include 'header.html' %}
+<div class="login">
+    <h2 class="texto">Iniciar Sesión</h2>
+    <form action="/login" method="post" class="formulario">
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        {% endif %}
+
+        <div class="input">
+            <label for="email" class="form_label">Email</label>
+            <input type="email" name="email" id="email" autocomplete="none" class="form_input" placeholder=" " required>
+        </div>
+
+        <div class="input">
+            <label for="password" class="form_label">Password</label>
+            <input type="password" name="password" id="password" autocomplete="none" class="form_input" placeholder=" ">
+        </div>
+
+        <button type="submit" class="continuar">
+            Continuar
+        </button>
+        <a href="/singup" class="sinup">
+            <p>¿No tienes cuenta?</p>
+            <p class="red">Regístrate</p>
+        </a>
+
+        <a href="/login" class="password">
+            <p>¿Olvidó su contraseña?</p>
+        </a>
+    </form>
+
+
+</div>
+
+{% include 'footer.html' %}

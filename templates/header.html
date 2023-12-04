@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rincon</title>
+    <script src="https://kit.fontawesome.com/283335a286.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="contenedor-navegacion">
+            <div class="contenido-navegacion contenedor">
+                <a href="/" class="logo">
+                    <div>
+                        <h2>Rincon<span class="verde">Pro</span><span>hi</span>bi<span class="rojo">do</span></h2>
+                    </div>
+                </a>
+
+                <nav class="navegacion ocultar nav-login">
+                    <div class="botones-platillos">
+                        <ul class="list-platillos">
+                            <li class="todos">
+                                <a href="/">Inicio</a>
+                            </li>
+
+                            <li class="pasta">
+                                <a href="#contacto">
+                                    Contacto
+                                </a>
+                            </li>
+
+                            <li class="postres">
+                                <a href="/login">
+                                    Iniciar Sesión
+                                </a>
+                            </li>
+                            <li class="pizza">
+                                <a href="/singup">
+                                    Regístrese
+                                </a>
+                            </li>
+                            <li class="ensaladas">
+
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="hamburguesa">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>

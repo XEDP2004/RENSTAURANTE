@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rincon Prohibido</title>
+    <script src="https://kit.fontawesome.com/283335a286.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor-navegacion">
+            <div class="contenido-navegacion contenedor">
+                <a href="/" class="logo">
+                    <div>
+                        <h2>Rincon<span>Pro</span><span>hi</span>b<span>ido</span></h2>
+                    </div>
+                </a>
+
+                <nav class="navegacion ocultar">
+                    <a href="/" class="enlaces">Inicio</a>
+
+                    <a href="#sobrenosotros" class="enlaces sobrenosotros">Sobre Nosotros</a>
+
+                    <a href="#menu" class="enlaces menu">Menú</a>
+
+                    <a href="#contacto" class="enlaces contacto">Contacto</a>
+
+                    <a href="/login" class="enlaces ">Iniciar Sesión</a>
+
+                    <a href="/singup" class="enlaces">Resgistrese</a>
+                </nav>
+                <div class="hamburguesa">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="contenido-header">
+        <div class="contenedor-encabezado">
+            <div class="texto-encabezado">
+                <h2>Rincon Prohibido</h2>
+                <a href="#menu" class="btn bordes"> nuestro menú</a>
+            </div>
+            <video autoplay loop muted>
+                    <source src="{{ url_for('static', filename='img/bg_video.mp4') }}">
+                </video>
+        </div>
+    </div>
+
+    <div class="contenedor-nosotros contenedor" id="sobrenosotros">
+        <div class="texto-nosotros">
+            <p class="bienvenida">Bienvenid@s al</p>
+            <h1>Restaurante Rincon Prohibido</h1>
+            <p>
+                En nuestro rincón gastronómico, explorarán un mundo de sabores donde lo dulce y lo salado se encuentran en una danza deliciosa. Desde irresistibles postres hasta ensaladas frescas, pizzas artesanales y pastas exquisitas, cada bocado es una experiencia
+                única. Prepárense para disfrutar de una fusión culinaria que deleitará sus sentidos. ¡Gracias por elegirnos para un viaje gastronómico inolvidable!
+            </p>
+            <a href="#contacto" class="btn btn-rojo">Contactar</a>
+        </div>
+        <div class="imagenes-nosotros">
+            <div class="imagen1">
+                <img data-src=" {{url_for('static', filename='img/nosotros1.webp')}}" alt="mujer comiendo pizza">
+            </div>
+            <div class="imagenes2">
+                <img data-src=" {{url_for('static', filename='img/nosotros2.webp')}}" alt=" mujeres comiendo pizza ">
+                <img data-src="{{url_for('static', filename='img/nosotros3.webp')}}" alt="plato con pasta ">
+            </div>
+        </div>
+    </div>
+
+    <section class="menu contenedor " id="menu">
+        <h2 class="texto-platillos">Platillos populares</h2>
+        <div class="botones-platillos ">
+            <button class="todos btn btn-verde">Todos</button>
+            <button class="ensaladas btn btn-verde ">Ensaladas</button>
+            <button class="pasta btn btn-verde ">Pasta</button>
+            <button class="pizza btn btn-verde ">Pizza</button>
+            <button class="postres btn btn-verde ">Postres</button>
+        </div>
+        <div class="platillos ">
+            <div class="platillo " data-platillo="ensaladas">
+                <img data-src=" {{url_for('static', filename='img/ensalada.webp')}}" alt="ensalada ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket"></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="ensaladas">
+                <img data-src=" {{url_for('static', filename='img/ensalada2.webp')}}" alt="ensalada ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket "></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="ensaladas">
+                <img data-src=" {{url_for('static', filename='img/ensalada.webp')}}" alt="ensalada ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket"></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="pasta">
+                <img data-src=" {{url_for('static', filename='img/pasta1.webp')}}" alt="pasta ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket "></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="pasta">
+                <img data-src=" {{url_for('static', filename='img/pasta2.webp')}}" alt="pasta ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket "></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="pasta">
+                <img data-src=" {{url_for('static', filename='img/pasta1.webp')}}" alt="pasta ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket "></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="pizza">
+                <img data-src=" {{url_for('static', filename='img/pizza1.webp')}}" alt="pizza ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket "></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="pizza">
+                <img data-src=" {{url_for('static', filename='img/pizza2.webp')}}" alt="pizza ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket "></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="pizza">
+                <img data-src=" {{url_for('static', filename='img/pizza1.webp')}}" alt="pizza ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket"></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="postres">
+                <img data-src=" {{url_for('static', filename='img/postres1.webp')}}" alt="postre ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket "></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="postres">
+                <img data-src=" {{url_for('static', filename='img/postres2.webp')}}" alt="postre ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket "></i></button>
+                </div>
+            </div>
+            <div class="platillo " data-platillo="postres">
+                <img data-src=" {{url_for('static', filename='img/postres3.webp')}}" alt="postre ">
+                <h2>Quinoa</h2>
+                <p>Quinoa, cerezas, tomate, aceitunas, cereal.</p>
+                <div class="precio ">
+                    <p>$40.0</p>
+                    <button><i class="fas fa-shopping-basket "></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="chef contenedor ">
+        <h2>Chef ejecutivo</h2>
+        <div class="contenido-chef ">
+            <div class="texto-chef ">
+                <h3>La exelencia está en la diversidad y el modo de progresar es conocer y comparar las diversidades de productos, culturas y técnicas
+                </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corporis dolores eveniet vitae, natus tempora recusandae hic laborum error ducimus repellat, laudantium temporibus tenetur totam sint consequuntur eligendi! Asperiores,
+                    ad.
+                </p>
+                <a href="# " class="btn btn-verde ">Leer Bíografia</a>
+            </div>
+            <div class="imagen-chef ">
+                <img data-src=" {{url_for('static', filename='img/chef.webp')}}" alt="fotografia del chef ">
+            </div>
+        </div>
+    </section>
+
+    <div class="formulario-contacto contenedor " id="contacto">
+
+        <div class="informacion-contacto ">
+            <h3>Contactanos</h3>
+            <p><i class="fas fa-map-marker-alt "></i>XXXXXXXX</p>
+            <p><i class="fas fa-envelope "></i>jaidervalettpuello@gmail.com</p>
+            <p><i class="fas fa-phone-alt "></i>3244808225</p>
+            <div class="redes-sociales ">
+                <i class="fab fa-facebook-square "></i>
+                <i class="fab fa-twitter-square "></i>
+                <i class="fab fa-instagram "></i>
+            </div>
+        </div>
+
+        <form action="/database" method="post" class="formulario ">
+            {% if contacto %}
+
+            <div class="alert alert-success d-flex align-items-center" role="alert">
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                    {{ conctacto}}
+                </div>
+            </div>
+            {% endif %}
+            <div class="input-formulario ">
+                <label for="nombre ">Nombre</label>
+                <input type="text " placeholder="Nombres" name="name" id="nombre">
+            </div>
+            <div class="input-formulario ">
+                <label for="apellidos ">Apellido</label>
+                <input type="text " placeholder="Apellido" name="surname" id="apellidos">
+            </div>
+            <div class="input-formulario ">
+                <label for="correo ">Correo</label>
+                <input type="email " placeholder="Email" name="email" id="correo">
+            </div>
+            <div class="input-formulario ">
+                <label for="telefono ">Teléfono</label>
+                <input type="tel " placeholder="Teléfono" name="tel" id="telefono">
+            </div>
+            <div class="input-formulario ">
+                <label for="mensaje">Mensaje</label>
+                <textarea name="massenger"></textarea>
+            </div>
+            <button type="submit" class="continuar">
+                continuar
+            </button>
+
+        </form>
+    </div>
+    <div class="pie-pagina" id="contacto">
+        <div class="contenedor-piepagina contenedor ">
+            <div class="info ">
+                <h3>Dirección</h3>
+                <p>xxxxxxx</p>
+            </div>
+            <div class="info ">
+                <h3>Días especiales</h3>
+                <p>Sabados y Jueves 7am - 11pm</p>
+                <p>3244808225</p>
+            </div>
+            <div class="info ">
+                <h3>Horarios</h3>
+                <p>Lunes - Domingo 7am - 11pm</p>
+                <div class="redes-sociales redes-pie ">
+                    <i class="fab fa-facebook-square "></i>
+                    <i class="fab fa-twitter-square "></i>
+                    <i class="fab fa-instagram "></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer ">
+        <p>xxxxx</p>
+    </footer>
+    <script src="{{ url_for( 'static', filename='javascript/app.js' ) }} "></script>
+
+</body>
+
+</html>

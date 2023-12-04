@@ -1,0 +1,50 @@
+{% include 'header.html' %}
+<div class="login singup ">
+    <h2 class="texto">crear cuenta</h2>
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <div class="alert alert-danger " role="alert ">
+        {{ message }}
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+    <form action="/databaseSingup" method="post" class="formulario ">
+
+        <div class="input">
+            <label for="name" class="form_label">Nombre</label>
+            <input type="text" name="name" id="name" autocomplete="none" class="form_input" placeholder=" ">
+        </div>
+        <div class="input">
+            <label for="surname" class="form_label">Apellido</label>
+            <input type="text" name="surname" id="surname" autocomplete="none" class="form_input" placeholder=" ">
+        </div>
+        <div class="input">
+            <label for="email" class="form_label">Correo</label>
+            <input type="email" name="email" id="email" autocomplete="none" class="form_input" placeholder=" " required>
+        </div>
+
+        <div class="input">
+            <label for="password" class="form_label">Contraseña</label>
+            <input type="password" name="password" id="password" autocomplete="none" class="form_input" placeholder=" " required>
+        </div>
+
+        <div class="input">
+            <label for="number" class="form_label">Identificaión</label>
+            <input type="number" name="id" id="number" autocomplete="none" class="form_input" placeholder=" " required>
+        </div>
+        <div class="input">
+            <label for="tel" class="form_label">Teléfono</label>
+            <input type="tel" name="tel" id="tel" autocomplete="none" class="form_input" placeholder=" ">
+        </div>
+        <button type="submit" class="continuar">
+            continuar
+        </button>
+        <a href="/login" login " class="sinup ">
+            <p>¿tienes cuenta?</p>
+        </a>
+
+        
+    </form>
+
+
+</div>
+
+{% include 'footer.html' %}
